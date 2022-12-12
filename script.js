@@ -12,20 +12,19 @@ var concatArray = [];
 
 function generatePassword() {
         console.log("Hey! You clicked the button")
-  
-// Write password to the #password input
 
-  //pw length check
+//pw length check & number entered
   var passwordLength = prompt("How many charachters would you like your password? (ie. 8-128)");
-    while (passwordLength < 7 || passwordLength > 128) {
-      alert("Please choose a whole number between 8-128");
-      var passwordLength = prompt("How many charachters would you like your password? (ie. 8-128)");
-      }
+  while (isNaN(passwordLength) || passwordLength < 7 || passwordLength > 128) {
+    alert("Please choose a whole number between 8-128");
+    var passwordLength = prompt("How many charachters would you like your password? (ie. 8-128)");
+  }
 
-      console.log("The string will be: ", passwordLength ) //console pw length criteria
+
+console.log("The string will be: ", passwordLength ) //console pw length criteria
 
   
-
+//Prompt user with confirm boxes.
   var passwordLower = confirm("Would you like to include lowercase letters?");
   var passwordUpper = confirm("Would you like to include uppercase letter?");
   var passwordSymbols = confirm("Would you like to include symbols in the password?");
@@ -53,19 +52,21 @@ function generatePassword() {
   if (passwordNumbers) {
     concatArray = concatArray.concat(numbers)
   }
-  console.log("concat string: ", concatArray);
-
   
-  var newPassword = ''
+  // Console to check concat array
+  console.log("Checking for array concat: ", concatArray); 
 
+//create random loop to generate password string
+  var newPassword = ''
   for (var i = 0; i < passwordLength; i++) {
     newPassword = newPassword + concatArray[Math.floor(Math.random() * concatArray.length)];
+    //check password generation
     console.log("generated pw:", newPassword)
   }
   return newPassword;
 
 }
-
+// Event listener for box click & password text output. 
 generateBtn.addEventListener("click", writePassword); 
 
 
@@ -78,22 +79,13 @@ function writePassword() {
 
 
 
-
-
-// Write loop for errors on input. 
-
-// create alert confirm boxes for password parameters
-
-// Add event listener to generate button
-
 /*
 1. Prompt User on password criteria 
   A. length
   B. Lower, Upper, Symbols, Numbers
 2. Validate input (ex. make sure correct # of length is entered)
   A. while loop to make sure number is between 8-128
-  b. while loop to make entry is number
-
+  b. while loop to confirm entry is number
 3. Generate password based on criteria
 4. Display password in box (insert gerated password variable into box)
 
