@@ -8,7 +8,7 @@ No installation necessary.
 
 ## Visual
 
-![Website Image](./assets/images/Horiseon-webpage-video.gif)
+![Website Image](./pwGenGIF.gif)
 
 
 ## Usage
@@ -17,7 +17,7 @@ Public use for informational purposes only.
 
 ## Link
 
-[Horiseon - SEO, Online Reputation, & Social Media](https://google.com)
+[Build-Password Generator](https://softpoachedeggs.github.io/build-password-generator/)
 
 ## License
 
