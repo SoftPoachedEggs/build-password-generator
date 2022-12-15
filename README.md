@@ -8,7 +8,7 @@ No installation necessary.
 
 ## Visual
 
-![Website Image](./pwGenGIF.gif)
+![Website Image](./assets/images/pwGenGIF.gif)
 
 
 ## Usage
