@@ -15,7 +15,7 @@ function generatePassword() {
 
 //pw length check & number entered
   var passwordLength = prompt("How many charachters would you like your password? (ie. 8-128)");
-  while (isNaN(passwordLength) || passwordLength < 7 || passwordLength > 128) {
+  while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
     alert("Please choose a whole number between 8-128");
     var passwordLength = prompt("How many charachters would you like your password? (ie. 8-128)");
   }
